@@ -1,10 +1,16 @@
 const mongoose=require('mongoose')
 
 var examinerSchema= new mongoose.Schema({
-    Email:'string',
-    UserName:'string',
+    Email:{
+        type:String,
+        unique:true
+    },
+    UserName:{
+        type:String,
+        unique:true
+    },
     Password:'string',
-    Passport:'string'
+    CloseAt:'string'
 })
 
 module.exports = Examiner = mongoose.Model('Examiner',examinerSchema)

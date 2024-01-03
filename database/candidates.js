@@ -2,9 +2,15 @@ const mongoose = require('mongoose')
 
 
 const candidateSchema= new mongoose.Schema({
-    Email:'string',
-    UserName:'string',
+    Email:{
+        type:String,
+        unique:true
+    },
+    UserName:{
+        type:String,
+        unique:true
+    },
     Password:'string',
-    Passport:'string'
+    CloseAt:'string'
 })
 module.exports = Candidate = mongoose.Model('Candidate',candidateSchema)
