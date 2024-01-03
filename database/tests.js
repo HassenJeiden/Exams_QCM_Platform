@@ -5,8 +5,11 @@ const testsSchema = new mongoose.Schema(
         TestReference: String,
         TestDuration: String,
         Examiner: String,
-        Questions: [String],
-        Suggestions: [{type:Array}],
+        Questions: [{
+            question:String,
+            suggestion:Array,
+            answer:String
+        }],
         correctAnswer: String
 
     }
